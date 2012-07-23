@@ -110,7 +110,6 @@ EOM
 # (already included inside other countries)
 push @alreadyIncluded, "GI";  # gibraltar in spain
 push @alreadyIncluded, "VA";  # vatican in italy
-push @alreadyIncluded, "SM";  # san marino in italy
 push @alreadyIncluded, "AX";  # åland islands in finland
 push @alreadyIncluded, "PR";  # puerto rico in USA
 push @alreadyIncluded, "X1";  # Channel islands in uk
@@ -256,10 +255,7 @@ sub multiCountry {
 
        # Handle the dirName
        my $dirName = $gmsName;
-       if ($dirName eq "england"){
-           $dirName = "uk";
-       }
-       elsif ($dirName eq "united_arab_emirates"){
+       if ($dirName eq "united_arab_emirates"){
            $dirName = "uae";
        }
        print "processing dirName $dirName\n";

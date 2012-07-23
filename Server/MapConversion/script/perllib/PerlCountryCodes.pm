@@ -101,7 +101,7 @@ $countryCode{"fm"}{"country"} 	= "micronesia";
 $countryCode{"fo"}{"country"} 	= "faeroe_islands";
 $countryCode{"fr"}{"country"} 	= "france";
 $countryCode{"ga"}{"country"} 	= "gabon";
-$countryCode{"gb"}{"country"} 	= "uk";
+$countryCode{"gb"}{"country"} 	= "england";
 $countryCode{"gd"}{"country"} 	= "grenada";
 $countryCode{"ge"}{"country"} 	= "georgia_country";
 $countryCode{"gf"}{"country"} 	= "french_guiana";
@@ -216,6 +216,7 @@ $countryCode{"si"}{"country"} 	= "slovenia";
 $countryCode{"sj"}{"country"} 	= "svalbard_and_jan_mayen";
 $countryCode{"sk"}{"country"} 	= "slovakia";
 $countryCode{"sl"}{"country"} 	= "sierra_leone";
+$countryCode{"sm"}{"country"} 	= "san_marino";
 $countryCode{"sn"}{"country"} 	= "senegal";
 $countryCode{"so"}{"country"} 	= "somalia";
 $countryCode{"sr"}{"country"} 	= "suriname";
@@ -265,7 +266,7 @@ $countryCode{"ca"}{"country"} 	= "canada";
 my %notHandled = ();
 $notHandled{"gi"} = 1; # gibraltar  (in spain)
 $notHandled{"va"} = 1; # vatican    (in italy)
-$notHandled{"sm"} = 1; # san_marino (in italy)
+#$notHandled{"sm"} = 1; # san_marino (in italy)
 $notHandled{"ax"} = 1; # aland_islands (in finland)
 $notHandled{"pr"} = 1; # puerto_rico (in usa)
 $notHandled{"nf"} = 1; # norfolk islands (in antarctica)
@@ -337,7 +338,7 @@ push @leftSideCountries, "trinidad_and_tobago";
 push @leftSideCountries, "turks_and_caicos_islands";
 push @leftSideCountries, "tuvalu";
 push @leftSideCountries, "uganda";
-push @leftSideCountries, "uk";
+push @leftSideCountries, "england";
 push @leftSideCountries, "british_virgin_islands";
 push @leftSideCountries, "united_states_virgin_islands";
 push @leftSideCountries, "zambia";
@@ -429,7 +430,7 @@ push @countryOrder, "norway";
 push @countryOrder, "denmark";
 push @countryOrder, "finland";
 push @countryOrder, "germany";
-push @countryOrder, "uk";
+push @countryOrder, "england";
 push @countryOrder, "austria";
 push @countryOrder, "switzerland";
 push @countryOrder, "liechtenstein";
@@ -651,6 +652,7 @@ push @countryOrder, "mayotte";
 push @countryOrder, "south_africa";
 push @countryOrder, "zambia";
 push @countryOrder, "zimbabwe";
+push @countryOrder, "san_marino";
 
 sub getCountryOrder {
     my %countriesToSort;
