@@ -6,7 +6,9 @@
 # Update it to point to the full path of where you create the BASEGENFILESPATH
 #BASEGENFILESPATH="fullpath/genfiles";
 #BASEGENFILESPATH="."
-BASEGENFILESPATH=`echo $(dirname $(readlink -f ${BASH_SOURCE[0]})) | sed -e "s/\/script$//"`
+if [ -z "$BASEGENFILESPATH" ] ; then
+    BASEGENFILESPATH=`echo $(dirname $(readlink -f ${BASH_SOURCE[0]})) | sed -e "s/\/script$//"`
+fi
 
 
 # Change to something else if you don't want the temp log files here
@@ -5088,7 +5090,7 @@ function extradata()
 
 
 # UK extradata
-   elif [ ${COUNTRY} = uk ]; then
+   elif [ ${COUNTRY} = england -o ${COUNTRY} = uk ]; then
        ok=""; #Empty statment replacer
 #      if [ ${INSERTION} = after_extitm ]; then #uk
 #
@@ -5472,6 +5474,48 @@ function extradata()
 
 # Zimbabwe extradata
    elif [ ${COUNTRY} = zimbabwe ]; then
+       ok=""; #Empty statment replacer
+#      if [ ${INSERTION} = after_extitm ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_intconn ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_trngen ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_setloc ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = before_merge ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_extconn ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_ovrmaps ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_addreg ]; then #zimbabwe
+#      fi
+
+
+# San Marino extradata
+   elif [ ${COUNTRY} = san_marino ]; then
+       ok=""; #Empty statment replacer
+#      if [ ${INSERTION} = after_extitm ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_intconn ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_trngen ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_setloc ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = before_merge ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_extconn ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_ovrmaps ]; then #zimbabwe
+#      fi
+#      if [ ${INSERTION} = after_addreg ]; then #zimbabwe
+#      fi
+
+
+# Zimbabwe extradata
+   elif [ ${COUNTRY} = san_marino ]; then
        ok=""; #Empty statment replacer
 #      if [ ${INSERTION} = after_extitm ]; then #zimbabwe
 #      fi
